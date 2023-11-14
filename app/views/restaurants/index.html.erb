@@ -1,0 +1,14 @@
+<h1>Check all the Restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+
+  <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+
+  <p>rating (<%= restaurant.rating %>⭐)</p>
+  <p><%= restaurant.address %></p>
+  <%= link_to "Delete",
+      restaurant_path(restaurant),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<% end %>

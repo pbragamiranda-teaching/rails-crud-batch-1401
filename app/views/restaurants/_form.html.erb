@@ -1,0 +1,9 @@
+<%= form_with model: restaurant do |f| %>
+  <%= f.label "Restaurant Name" %>
+  <%= f.text_field :name, placeholder: "Restaurant Co." %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>
